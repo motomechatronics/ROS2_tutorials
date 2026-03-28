@@ -1,0 +1,15 @@
+site_name: J16MOTO ROS 2 Tutorials
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
