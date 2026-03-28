@@ -4,136 +4,130 @@ Welcome to the **ROS 2 Tutorials** section dedicated to the **mobile autonomous 
 
 These tutorials are specifically designed for **MOTO Mechatronics robotic platforms**, with a particular focus on the **J16MOTO** robot.
 
-These tutorials can be directly implemented using the **MOTO Mechatronics Application Development Environment**, which can be downloaded from: https://github.com/motomechatronics/amrj16moto_utimac
+The tutorials can be directly implemented using the **MOTO Mechatronics Application Development Environment**, available at:  
+https://github.com/motomechatronics/amrj16moto_utimac
 
-This area provides a **complete learning path** for students, researchers, and engineers who want to acquire **practical and professional skills in mobile robotics using ROS 2**, working on real robotic platforms rather than abstract examples.
-
----
-
-## 🎯 Purpose of this Section
-
-The goal of these tutorials is to:
-
-- provide a **structured and progressive introduction** to ROS 2 applied to mobile robots  
-- bridge the gap between **theoretical ROS knowledge and real robotic systems**
-- guide users through **hands-on experimentation** on MOTO Mechatronics robots
-- promote **good engineering practices**, including documentation, reproducibility, and clarity
-
-These tutorials are not meant to be isolated exercises.  
-They are part of a **coherent learning journey**, where each topic prepares the ground for the next one.
+This section provides a **structured and comprehensive learning path** for students, researchers, and engineers aiming to acquire **practical and professional competencies in mobile robotics using ROS 2**, working on real robotic systems rather than abstract examples.
 
 ---
 
-## 🤖 Target Platforms
+## Purpose of this Section
 
-The tutorials are developed and tested on **mobile autonomous robots produced by MOTO Mechatronics**, including educational and research-oriented platforms.
+The objective of these tutorials is to:
 
-While the focus is on MOTO robots, the concepts and workflows presented here follow **ROS 2 standards** and are therefore transferable to other mobile robotic systems.
+- Provide a **structured and progressive introduction** to ROS 2 applied to mobile robotics  
+- Bridge the gap between **theoretical knowledge and real robotic systems**  
+- Enable **hands-on experimentation** on MOTO Mechatronics platforms  
+- Promote **sound engineering practices**, including reproducibility, clarity, and documentation  
+
+These tutorials are not intended as isolated exercises, but as part of a **coherent learning pathway**, where each topic builds upon the previous one.
 
 ---
 
-## 📚 Tutorial Scope 
+## Target Platforms
 
-This section covers the full ROS 2 ecosystem for mobile robotics, including:
+The tutorials are developed and validated on **mobile autonomous robots produced by MOTO Mechatronics**, including educational and research-oriented platforms.
 
-- **ROS 2 fundamentals**
-  - Nodes, topics, services, actions
-  - Parameters and lifecycle nodes
-  - Package structure and best practices
+While the primary focus is on MOTO systems, the methodologies and workflows follow **ROS 2 standards**, making them transferable to other robotic platforms.
 
-- **Robot description**
-  - URDF / Xacro
-  - TF and coordinate frames
-  - Sensors and actuators modeling
+---
+
+## Tutorial Scope
+
+This section covers the core components of the ROS 2 ecosystem for mobile robotics:
+
+- **ROS 2 Fundamentals**
+  - Nodes, topics, services, and actions  
+  - Parameters and lifecycle nodes  
+  - Package structure and best practices  
+
+- **Robot Description**
+  - URDF and Xacro  
+  - TF and coordinate frames  
+  - Modeling of sensors and actuators  
 
 - **Simulation**
-  - Gazebo / other supported simulators
-  - Simulation vs real robot workflows
-  - Debugging in simulation
+  - Gazebo and compatible simulators  
+  - Simulation versus real robot workflows  
+  - Debugging in simulated environments  
 
 - **Navigation**
-  - Nav2 stack
-  - Localization (AMCL)
-  - Mapping and SLAM
-  - Costmaps and planners
+  - Nav2 stack  
+  - Localization (AMCL)  
+  - Mapping and SLAM  
+  - Costmaps and planning algorithms  
 
 - **Perception**
-  - Cameras and LiDAR integration
-  - Sensor data processing
-  - Basic perception pipelines
+  - Integration of cameras and LiDAR  
+  - Sensor data processing  
+  - Basic perception pipelines  
 
-- **System integration**
-  - Launch files
-  - Configuration management
-  - Debugging and logging
-
----
-
-## 🧭 How the Tutorials Are Written
-
-Each tutorial is designed to be:
-
-- **Applied** – commands and code are executed on real projects  
-- **Narrative** – every section explains *why* a step is needed before showing *how*  
-- **Incremental** – no big jumps in complexity without preparation  
-- **Reproducible** – the reader should always obtain the expected result  
-
-You are encouraged to **run, modify, break, and fix** things while following the tutorials.
-
-If something does not work as expected, it is considered part of the learning process.
+- **System Integration**
+  - Launch files  
+  - Configuration management  
+  - Debugging and logging  
 
 ---
 
-## 👨‍🎓 Who This Is For
+## Methodology
 
-These tutorials are suitable for:
+Each tutorial is designed according to the following principles:
 
-- university students in robotics, automation, or computer science
-- internship candidates working with MOTO Mechatronics
-- junior engineers approaching ROS 2 for mobile robotics
-- anyone who wants a **clear, applied, and realistic introduction to ROS 2**
+- **Applied** – all commands and code are executed on real systems  
+- **Explanatory** – each step is introduced with its underlying rationale  
+- **Incremental** – complexity is introduced progressively  
+- **Reproducible** – results should be consistent and verifiable  
 
-A basic knowledge of Linux and programming (Python and/or C++) is recommended.
-
----
-
-## 🧠 Learning Philosophy
-
-> ROS 2 is not just a middleware.  
-> It is a way of thinking about robotic systems.
-
-These tutorials aim to teach not only *how to use ROS 2*, but also **how to reason about robotic architectures**, data flow, and system behavior in real-world scenarios.
+Users are encouraged to experiment actively, including modifying and troubleshooting the system as part of the learning process.
 
 ---
 
-## 📌 Notes
+## Intended Audience
 
-- Tutorials are continuously improved and expanded.
-- Feedback and suggestions are welcome.
-- All content is intended for **educational and training purposes**.
+These tutorials are intended for:
 
----
+- University students in robotics, automation, or computer science  
+- Internship candidates working with MOTO Mechatronics  
+- Junior engineers approaching ROS 2 for mobile robotics  
+- Practitioners seeking a **clear and application-oriented introduction to ROS 2**  
 
-Happy learning,  
-**MOTO Mechatronics – Robotics Education & Research**
-
-# ROS 2 Node Example
-
-This section explains how to create and run a simple ROS 2 node.
+A basic understanding of Linux and programming (Python and/or C++) is recommended.
 
 ---
 
-## 📌 Initialization
+## Learning Philosophy
+
+ROS 2 is not only a middleware, but a framework for designing and reasoning about robotic systems.
+
+These tutorials aim to develop both **practical skills** and the ability to **analyze system architecture, data flow, and behavior** in real-world conditions.
+
+---
+
+## Notes
+
+- The tutorials are continuously updated and expanded  
+- Feedback and contributions are encouraged  
+- All content is intended for **educational and training purposes**  
+
+---
+
+## Example: ROS 2 Node
+
+This section illustrates the creation and execution of a minimal ROS 2 node.
+
+---
+
+### Initialization
 
 !!! note
-    Make sure ROS 2 is properly installed and sourced before running any command.
+    Ensure that ROS 2 is correctly installed and that the environment has been sourced before executing any command.
 
 ---
 
-## 🚀 Run a Node
+### Running a Node
 
 !!! tip
-    Use the following command to run your node:
+    Execute the following command to run a ROS 2 node:
 
     ```bash
     ros2 run my_package my_node
@@ -141,10 +135,10 @@ This section explains how to create and run a simple ROS 2 node.
 
 ---
 
-## ⚠️ Common Issue
+### Common Issue
 
 !!! warning "Environment not sourced"
-    If you see errors like *command not found*, you probably forgot to source ROS 2:
+    If commands are not recognized, verify that the ROS 2 environment has been sourced:
 
     ```bash
     source /opt/ros/humble/setup.bash
@@ -152,7 +146,7 @@ This section explains how to create and run a simple ROS 2 node.
 
 ---
 
-## 🧠 Python Node Example
+### Python Node Example
 
 ```python
 import rclpy
@@ -171,5 +165,4 @@ def main(args=None):
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
-
 ```
