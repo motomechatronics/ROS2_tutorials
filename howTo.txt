@@ -1,0 +1,16 @@
+metti la pagina da aggiungere al sito in docs: file.md o file.pynb
+git add .
+git commit -m "nuovo tutorial"
+git push
+py -m mkdocs serve
+
+
+
+
+
+
+
+
+P.S.
+
+installa py -m pip install mkdocs-jupyter se usi file .pynb anzicchè .md nativi
