@@ -22,8 +22,7 @@ theme:
 nav:
   - Getting Started:
       - Introduction: getting_started/introduction.md
-      - Setup:
-          - Getting Started: getting_started/getting_started.md
+      - Setup: getting_started/getting_started.md
   - ROS 2 tutorials:
       - Autonomous Docking with the J16MOTO: ros2_basic_tutorial_autonomous_docking_j16moto.ipynb
 
