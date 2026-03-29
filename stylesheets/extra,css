@@ -3,16 +3,21 @@
   --sky-blue-dark: #0ea5e9;
   --navy: #163a63;
   --border-light: #dbe4ea;
+  --text-main: #334155;
+  --heading-main: #0f172a;
 }
 
-/* Header bianco */
+/* =========================
+   HEADER
+   ========================= */
+
 .md-header {
   background: #ffffff;
   color: var(--navy);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
-/* Titolo e icone header blu-navy */
+/* Titolo e icone header */
 .md-header__title,
 .md-header__topic,
 .md-header__button,
@@ -25,67 +30,113 @@
   fill: var(--navy);
 }
 
-/* Sidebar sinistra e destra più ampie */
-.md-sidebar--primary {
-  width: 300px;
+/* Logo un po' più grande */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 45px;
 }
 
-.md-sidebar--secondary {
-  width: 300px;
-}
+/* =========================
+   LAYOUT GENERALE
+   ========================= */
 
-/* Più spazio utile in pagina */
 .md-grid {
   max-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-/* Linea verticale di separazione tra menu sinistro e contenuto */
+/* Sidebar sinistra */
 .md-sidebar--primary {
+  width: 300px;
   border-right: 1px solid var(--border-light);
 }
 
-/* Anche la TOC destra separata dal contenuto */
+/* Sidebar destra / TOC */
 .md-sidebar--secondary {
-  border-left: 1px solid var(--border-light);
-  padding-left: 1rem;
+  width: 300px;
+  border-left: none !important;
+  box-shadow: none !important;
+  padding-left: 0;
 }
 
-/* Link menu */
+/* =========================
+   MENU SINISTRO
+   ========================= */
+
+.md-nav__title {
+  color: var(--navy);
+  font-weight: 700;
+}
+
 .md-nav__link {
-  color: #334155;
+  color: var(--text-main);
+  transition: color 0.2s ease;
 }
 
-/* Voce attiva: testo sky-blue */
-.md-nav__link--active,
 .md-nav__link:hover {
   color: var(--sky-blue-dark);
+}
+
+/* Voce attiva */
+.md-nav__link--active {
+  color: var(--navy) !important;
   font-weight: 600;
 }
 
-/* Lineetta verticale accanto all'elemento attivo nel menu sinistro */
-.md-nav__item .md-nav__link--active {
-  border-left: 3px solid var(--sky-blue);
-  padding-left: 0.6rem;
-  margin-left: -0.8rem;
+/* Lineetta verticale blue-navy sulla voce attiva */
+.md-nav__item--active > .md-nav__link {
+  position: relative;
 }
 
-/* Lineetta verticale per voce attiva nel TOC a destra */
-.md-nav--secondary .md-nav__link--active {
-  border-left: 3px solid var(--sky-blue);
-  padding-left: 0.75rem;
-  margin-left: -0.9rem;
+.md-nav__item--active > .md-nav__link::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background-color: var(--navy);
+  border-radius: 2px;
 }
 
-/* Titoli dei blocchi menu */
-.md-nav__title,
+/* Frecce menu collassabili */
+.md-nav__toggle ~ .md-nav__link .md-nav__icon,
+.md-nav__toggle ~ label .md-nav__icon {
+  color: var(--navy);
+}
+
+/* =========================
+   TOC DESTRA
+   ========================= */
+
 .md-nav--secondary .md-nav__title {
   color: var(--navy);
   font-weight: 700;
 }
 
-/* Breadcrumb in alto */
+.md-nav--secondary .md-nav__link {
+  color: var(--text-main);
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  color: var(--sky-blue-dark);
+}
+
+.md-nav--secondary .md-nav__link--active {
+  color: var(--navy) !important;
+  font-weight: 600;
+}
+
+/* Niente lineette verticali nel TOC */
+.md-nav--secondary .md-nav__item--active > .md-nav__link::before {
+  content: none !important;
+}
+
+/* =========================
+   BREADCRUMB / PATH
+   ========================= */
+
 .md-path,
 .md-path__link {
   color: #64748b;
@@ -96,20 +147,36 @@
   color: var(--navy);
 }
 
-/* Chevrons/frecce dei menu collassabili */
-.md-nav__toggle ~ .md-nav__link .md-nav__icon,
-.md-nav__toggle ~ label .md-nav__icon {
-  color: var(--navy);
+/* =========================
+   CONTENUTO PAGINA
+   ========================= */
+
+.md-typeset {
+  color: var(--text-main);
 }
 
-/* Colore generale dei link nel contenuto */
 .md-typeset a {
   color: var(--sky-blue-dark);
 }
 
-/* Titolo principale pagina */
 .md-typeset h1,
 .md-typeset h2,
-.md-typeset h3 {
-  color: #0f172a;
+.md-typeset h3,
+.md-typeset h4 {
+  color: var(--heading-main);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media screen and (max-width: 1219px) {
+  .md-sidebar--primary,
+  .md-sidebar--secondary {
+    width: auto;
+  }
+
+  .md-sidebar--primary {
+    border-right: none;
+  }
 }
