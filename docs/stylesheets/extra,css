@@ -2,9 +2,10 @@
   --sky-blue: #38bdf8;
   --sky-blue-dark: #0ea5e9;
   --navy: #163a63;
-  --border-light: #dbe4ea;
+  --border-light: #e5e7eb;
   --text-main: #334155;
   --heading-main: #0f172a;
+  --tree-line: #cbd5e1;
 }
 
 /* =========================
@@ -17,7 +18,6 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
-/* Titolo e icone header */
 .md-header__title,
 .md-header__topic,
 .md-header__button,
@@ -30,14 +30,14 @@
   fill: var(--navy);
 }
 
-/* Logo un po' più grande */
+/* Logo più grande */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   height: 45px;
 }
 
 /* =========================
-   LAYOUT GENERALE
+   LAYOUT
    ========================= */
 
 .md-grid {
@@ -46,13 +46,13 @@
   padding-right: 16px;
 }
 
-/* Sidebar sinistra */
+/* Menu sinistro */
 .md-sidebar--primary {
   width: 300px;
   border-right: 1px solid var(--border-light);
 }
 
-/* Sidebar destra / TOC */
+/* TOC destra */
 .md-sidebar--secondary {
   width: 300px;
   border-left: none !important;
@@ -64,31 +64,36 @@
    MENU SINISTRO
    ========================= */
 
+/* Titoli sezioni */
 .md-nav__title {
-  color: var(--navy);
   font-weight: 700;
+  color: var(--navy);
 }
 
+/* Link base */
 .md-nav__link {
   color: var(--text-main);
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .md-nav__link:hover {
   color: var(--sky-blue-dark);
 }
 
-/* Voce attiva */
+/* Pagina attiva */
 .md-nav__link--active {
+  font-weight: 700;
   color: var(--navy) !important;
-  font-weight: 600;
 }
 
-/* Lineetta verticale blue-navy sulla voce attiva */
+/* Mantiene bold sulla catena attiva */
 .md-nav__item--active > .md-nav__link {
+  font-weight: 700;
+  color: var(--navy);
   position: relative;
 }
 
+/* Lineetta verticale blue-navy sulla voce attiva */
 .md-nav__item--active > .md-nav__link::before {
   content: "";
   position: absolute;
@@ -100,10 +105,54 @@
   border-radius: 2px;
 }
 
-/* Frecce menu collassabili */
+/* Frecce collassabili */
 .md-nav__toggle ~ .md-nav__link .md-nav__icon,
 .md-nav__toggle ~ label .md-nav__icon {
   color: var(--navy);
+}
+
+/* =========================
+   ALBERO VISIVO MENU SINISTRO
+   ========================= */
+
+/* Indentazione livelli */
+.md-nav--primary .md-nav__list .md-nav__list {
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--tree-line);
+}
+
+/* Livelli più profondi */
+.md-nav--primary .md-nav__list .md-nav__list .md-nav__list {
+  margin-left: 0.65rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--tree-line);
+}
+
+/* Piccolo ramo orizzontale verso ciascun elemento figlio */
+.md-nav--primary .md-nav__list .md-nav__list > .md-nav__item > .md-nav__link {
+  position: relative;
+}
+
+.md-nav--primary .md-nav__list .md-nav__list > .md-nav__item > .md-nav__link::after {
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: 1.05em;
+  width: 0.55rem;
+  height: 1px;
+  background: var(--tree-line);
+}
+
+/* Ramo più scuro per il percorso attivo */
+.md-nav--primary .md-nav__item--active > nav.md-nav,
+.md-nav--primary .md-nav__item--active > .md-nav {
+  border-left-color: var(--navy);
+}
+
+/* Anche il ramo orizzontale del nodo attivo un po' più marcato */
+.md-nav--primary .md-nav__item--active > .md-nav__link::after {
+  background: var(--navy);
 }
 
 /* =========================
@@ -111,8 +160,8 @@
    ========================= */
 
 .md-nav--secondary .md-nav__title {
-  color: var(--navy);
   font-weight: 700;
+  color: var(--navy);
 }
 
 .md-nav--secondary .md-nav__link {
@@ -124,17 +173,18 @@
 }
 
 .md-nav--secondary .md-nav__link--active {
-  color: var(--navy) !important;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--navy);
 }
 
-/* Niente lineette verticali nel TOC */
-.md-nav--secondary .md-nav__item--active > .md-nav__link::before {
+/* Nessuna linea nel TOC */
+.md-nav--secondary .md-nav__item--active > .md-nav__link::before,
+.md-nav--secondary .md-nav__item--active > .md-nav__link::after {
   content: none !important;
 }
 
 /* =========================
-   BREADCRUMB / PATH
+   BREADCRUMB
    ========================= */
 
 .md-path,
@@ -148,7 +198,7 @@
 }
 
 /* =========================
-   CONTENUTO PAGINA
+   CONTENUTO
    ========================= */
 
 .md-typeset {
@@ -178,5 +228,16 @@
 
   .md-sidebar--primary {
     border-right: none;
+  }
+
+  .md-nav--primary .md-nav__list .md-nav__list,
+  .md-nav--primary .md-nav__list .md-nav__list .md-nav__list {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0.5rem;
+  }
+
+  .md-nav--primary .md-nav__list .md-nav__list > .md-nav__item > .md-nav__link::after {
+    content: none;
   }
 }
