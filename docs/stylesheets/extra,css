@@ -1,11 +1,26 @@
 :root {
+  --navy: #163a63;
   --sky-blue: #38bdf8;
   --sky-blue-dark: #0ea5e9;
 }
 
-/* Barra superiore */
+/* Header bianco */
 .md-header {
-  background-color: var(--sky-blue);
+  background-color: #ffffff;
+  color: var(--navy);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Titolo header blu-navy */
+.md-header__title,
+.md-header__topic,
+.md-header__button {
+  color: var(--navy);
+}
+
+/* Icone header */
+.md-header__button svg {
+  fill: var(--navy);
 }
 
 /* Sidebar sinistra */
@@ -18,15 +33,26 @@
   width: 300px;
 }
 
-/* Usa più spazio orizzontale */
+/* Più spazio utile in pagina */
 .md-grid {
   max-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-/* Link attivi */
-.md-nav__link--active,
-.md-nav__link:hover {
+/* Link menu */
+.md-nav__link:hover,
+.md-nav__link--active {
   color: var(--sky-blue-dark);
+  font-weight: 600;
+}
+
+/* Titoli sezione nel menu */
+.md-nav__title {
+  color: var(--navy);
+}
+
+/* Piccoli indicatori più visibili */
+.md-nav__icon::after {
+  color: var(--navy);
 }

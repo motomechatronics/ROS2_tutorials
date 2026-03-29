@@ -7,12 +7,12 @@ theme:
 
   palette:
     scheme: default
-    primary: light blue
+    primary: white
     accent: blue
 
   features:
     - navigation.sections
-    - navigation.expand
+    - navigation.instant
     - navigation.top
     - toc.follow
     - search.suggest
