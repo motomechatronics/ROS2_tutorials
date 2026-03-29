@@ -1,4 +1,5 @@
 site_name: J16MOTO Documentation
+site_url: https://motomechatronics.github.io/ROS2_tutorials/
 
 theme:
   name: material
