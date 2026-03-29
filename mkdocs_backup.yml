@@ -1,0 +1,21 @@
+site_name: J16MOTO ROS 2 Tutorials
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - ROS 2:
+      - Basic Tutorial: ros2_basic_tutorial_autonomous_docking_j16moto.ipynb
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+plugins:
+  - mkdocs-jupyter

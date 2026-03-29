@@ -1,0 +1,32 @@
+:root {
+  --sky-blue: #38bdf8;
+  --sky-blue-dark: #0ea5e9;
+}
+
+/* Barra superiore */
+.md-header {
+  background-color: var(--sky-blue);
+}
+
+/* Sidebar sinistra */
+.md-sidebar--primary {
+  width: 300px;
+}
+
+/* TOC destra */
+.md-sidebar--secondary {
+  width: 300px;
+}
+
+/* Usa più spazio orizzontale */
+.md-grid {
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Link attivi */
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--sky-blue-dark);
+}

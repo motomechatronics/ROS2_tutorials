@@ -2,12 +2,26 @@ site_name: J16MOTO ROS 2 Tutorials
 
 theme:
   name: material
+  logo: images/logo.png
+  favicon: images/logo.png
+
+  palette:
+    scheme: default
+    primary: light blue
+    accent: blue
+
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
 
 nav:
   - Home: index.md
   - ROS 2:
-      - Basic Tutorial: ros2_basic_tutorial_autonomous_docking_j16moto.ipynb
-
+      - Basic Tutorial: ros2_basic_tutorial_autonomous_docking_j16moto_fixed.ipynb
 
 markdown_extensions:
   - admonition
@@ -18,4 +32,8 @@ markdown_extensions:
   - pymdownx.snippets
 
 plugins:
+  - search
   - mkdocs-jupyter
+
+extra_css:
+  - stylesheets/extra.css
