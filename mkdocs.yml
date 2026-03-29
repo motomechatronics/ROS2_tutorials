@@ -12,7 +12,8 @@ theme:
 
   features:
     - navigation.sections
-    - navigation.instant
+    - navigation.path
+    - navigation.indexes
     - navigation.top
     - toc.follow
     - search.suggest
@@ -21,7 +22,7 @@ theme:
 nav:
   - Home: index.md
   - ROS 2:
-      - Basic Tutorial: ros2_basic_tutorial_autonomous_docking_j16moto_fixed.ipynb
+      - Basic Tutorial: ros2_basic_tutorial_autonomous_docking_j16moto.ipynb
 
 markdown_extensions:
   - admonition
