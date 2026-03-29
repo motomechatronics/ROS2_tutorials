@@ -1,34 +1,35 @@
 :root {
-  --navy: #163a63;
   --sky-blue: #38bdf8;
   --sky-blue-dark: #0ea5e9;
+  --navy: #163a63;
+  --border-light: #dbe4ea;
 }
 
 /* Header bianco */
 .md-header {
-  background-color: #ffffff;
+  background: #ffffff;
   color: var(--navy);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
-/* Titolo header blu-navy */
+/* Titolo e icone header blu-navy */
 .md-header__title,
 .md-header__topic,
-.md-header__button {
+.md-header__button,
+.md-header__source {
   color: var(--navy);
 }
 
-/* Icone header */
-.md-header__button svg {
+.md-header__button svg,
+.md-search__icon svg {
   fill: var(--navy);
 }
 
-/* Sidebar sinistra */
+/* Sidebar sinistra e destra più ampie */
 .md-sidebar--primary {
   width: 300px;
 }
 
-/* TOC destra */
 .md-sidebar--secondary {
   width: 300px;
 }
@@ -40,19 +41,75 @@
   padding-right: 16px;
 }
 
+/* Linea verticale di separazione tra menu sinistro e contenuto */
+.md-sidebar--primary {
+  border-right: 1px solid var(--border-light);
+}
+
+/* Anche la TOC destra separata dal contenuto */
+.md-sidebar--secondary {
+  border-left: 1px solid var(--border-light);
+  padding-left: 1rem;
+}
+
 /* Link menu */
-.md-nav__link:hover,
-.md-nav__link--active {
+.md-nav__link {
+  color: #334155;
+}
+
+/* Voce attiva: testo sky-blue */
+.md-nav__link--active,
+.md-nav__link:hover {
   color: var(--sky-blue-dark);
   font-weight: 600;
 }
 
-/* Titoli sezione nel menu */
-.md-nav__title {
+/* Lineetta verticale accanto all'elemento attivo nel menu sinistro */
+.md-nav__item .md-nav__link--active {
+  border-left: 3px solid var(--sky-blue);
+  padding-left: 0.6rem;
+  margin-left: -0.8rem;
+}
+
+/* Lineetta verticale per voce attiva nel TOC a destra */
+.md-nav--secondary .md-nav__link--active {
+  border-left: 3px solid var(--sky-blue);
+  padding-left: 0.75rem;
+  margin-left: -0.9rem;
+}
+
+/* Titoli dei blocchi menu */
+.md-nav__title,
+.md-nav--secondary .md-nav__title {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* Breadcrumb in alto */
+.md-path,
+.md-path__link {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.md-path__link:hover {
   color: var(--navy);
 }
 
-/* Piccoli indicatori più visibili */
-.md-nav__icon::after {
+/* Chevrons/frecce dei menu collassabili */
+.md-nav__toggle ~ .md-nav__link .md-nav__icon,
+.md-nav__toggle ~ label .md-nav__icon {
   color: var(--navy);
+}
+
+/* Colore generale dei link nel contenuto */
+.md-typeset a {
+  color: var(--sky-blue-dark);
+}
+
+/* Titolo principale pagina */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: #0f172a;
 }
