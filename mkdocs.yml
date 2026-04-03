@@ -26,7 +26,9 @@ nav:
       - Setup:
           - Installation: getting_started/getting_started.md
   - ROS 2 tutorials:
-      - Autonomous Docking with the J16MOTO: ros2_basic_tutorial_autonomous_docking_j16moto.ipynb
+      - Autonomous Docking with the J16MOTO:
+          - Chapter 1: chapter1.ipynb
+          - Chapter 2: chapter2.ipynb
 
 markdown_extensions:
   - admonition

@@ -1,10 +1,4 @@
-# Getting Started
-
-Welcome to the **J16MOTO ROS 2 Tutorials** documentation.
-
-This guide helps you set up your environment and start working with the **J16MOTO** platform using **ROS 2**. It is designed for beginners who want to get the tutorials running quickly, while also providing enough structure for more advanced users.
-
----
+# **Getting Started**
 
 ## What you will learn
 

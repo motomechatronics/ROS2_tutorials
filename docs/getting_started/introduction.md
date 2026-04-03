@@ -1,4 +1,4 @@
-# ROS 2 Tutorials for MOTO Mobile Autonomous Robots
+# **ROS 2 Tutorials for MOTO Mobile Autonomous Robots**
 
 Welcome to the **ROS 2 Tutorials** section dedicated to the **mobile autonomous robots developed by MOTO Mechatronics**.
 

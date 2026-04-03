@@ -1,4 +1,4 @@
-# Getting Started
+# **Getting Started**
 
 Welcome to the **J16MOTO ROS 2 Tutorials** documentation.
 
