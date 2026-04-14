@@ -29,6 +29,13 @@ nav:
       - Autonomous Docking with the J16MOTO:
           - Chapter 1: chapter1.ipynb
           - Chapter 2: chapter2.ipynb
+          - Chapter 3: chapter3.ipynb
+          - Chapter 4: chapter4.ipynb
+          - Chapter 5: chapter5.ipynb
+          - Chapter 6: chapter6.ipynb
+          - Chapter 7: chapter7.ipynb
+          - Chapter 8: chapter8.ipynb
+          - Chapter 9: chapter9.ipynb
 
 markdown_extensions:
   - admonition
