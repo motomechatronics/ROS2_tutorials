@@ -215,17 +215,19 @@
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE (CELLULARI E TABLET)
    ========================= */
 
 @media screen and (max-width: 1219px) {
-  .md-sidebar--primary,
-  .md-sidebar--secondary {
-    width: auto;
+  /* Ridiamo una larghezza fissa al menu e uno sfondo bianco! */
+  .md-sidebar--primary {
+    width: 260px !important; 
+    background-color: #ffffff !important;
+    border-right: none;
   }
 
-  .md-sidebar--primary {
-    border-right: none;
+  .md-sidebar--secondary {
+    display: none !important; /* Nascondiamo la TOC destra su mobile */
   }
 
   .md-nav--primary .md-nav__list .md-nav__list,
