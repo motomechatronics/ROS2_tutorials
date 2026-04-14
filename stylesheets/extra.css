@@ -226,6 +226,7 @@
 
   .md-sidebar--primary {
     border-right: none;
+    background-color: #ffffff;
   }
 
   .md-nav--primary .md-nav__list .md-nav__list,
