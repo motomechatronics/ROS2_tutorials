@@ -226,7 +226,12 @@
 
   .md-sidebar--primary {
     border-right: none;
-    background-color: #ffffff;
+  }
+
+  /* ECCO LA MAGIA: Forziamo il pannello del menu a essere bianco e coprente */
+  .md-nav--primary, 
+  .md-nav--primary .md-nav {
+    background-color: #ffffff !important;
   }
 
   .md-nav--primary .md-nav__list .md-nav__list,
