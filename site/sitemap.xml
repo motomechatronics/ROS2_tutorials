@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://motomechatronics.github.io/ROS2_tutorials/</loc>
+         <lastmod>2026-04-14</lastmod>
+    </url>
+    <url>
+         <loc>https://motomechatronics.github.io/ROS2_tutorials/chapter1/</loc>
+         <lastmod>2026-04-14</lastmod>
+    </url>
+    <url>
+         <loc>https://motomechatronics.github.io/ROS2_tutorials/chapter2/</loc>
+         <lastmod>2026-04-14</lastmod>
+    </url>
+    <url>
          <loc>https://motomechatronics.github.io/ROS2_tutorials/getting_started/</loc>
-         <lastmod>2026-03-29</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://motomechatronics.github.io/ROS2_tutorials/ros2_basic_tutorial_autonomous_docking_j16moto/</loc>
-         <lastmod>2026-03-29</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://motomechatronics.github.io/ROS2_tutorials/ros2_basic_tutorial_autonomous_docking_j16moto_backup/</loc>
-         <lastmod>2026-03-29</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://motomechatronics.github.io/ROS2_tutorials/getting_started/getting_started/</loc>
-         <lastmod>2026-03-29</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://motomechatronics.github.io/ROS2_tutorials/getting_started/introduction/</loc>
-         <lastmod>2026-03-29</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
 </urlset>
